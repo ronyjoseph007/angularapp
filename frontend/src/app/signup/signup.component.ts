@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,16 +9,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
-  constructor(private http: HttpClient, private router: Router) {}
+  public signUpForm: FormGroup;
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private formBuilder: FormBuilder
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.signUpForm = this.formBuilder.group({
+      email: [''],
+      password: [''],
+    });
+  }
 
   signUp() {
     this.http
-      .post('http://localhost:3000/register', {
-        email: 'sasas',
-        password: 'sasas',
-      })
+      .post('http://localhost:3000/register', this.signUpForm.value)
       .subscribe(
         (res) => {
           console.log(res + 'kkki');

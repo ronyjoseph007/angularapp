@@ -19,15 +19,19 @@
       <div class="main">
         <h1>Welcome to Globiliti!</h1>
         <p class="sub">Create your school account</p>
-        <form (ngSubmit)="signUp()">
+        <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
           <div class="inputs">
             <div class="email">
               <label>Email</label>
-              <input type="email" placeholder="EMAIL" />
+              <input formControlName="email" type="email" placeholder="EMAIL" />
             </div>
             <div class="pass">
               <label>Password</label>
-              <input type="password" placeholder="PASSWORD" />
+              <input
+                formControlName="password"
+                type="password"
+                placeholder="PASSWORD"
+              />
             </div>
           </div>
 
