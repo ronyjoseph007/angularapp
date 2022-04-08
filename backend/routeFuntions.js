@@ -3,8 +3,6 @@ const peopleMod = require('./models/peoples');
 
 module.exports = {
     createPerson: async (req, res) => {
-        console.log(req.body, 'repepepe');
-
         const email = await peopleMod.find({ email: req.body.email });
 
         console.log(email + '4444');
@@ -63,7 +61,7 @@ module.exports = {
     },
 
     updateUser: async (req, res) => {
-        console.log('99999999');
+        console.log('entetet');
         const data = await peopleMod.find({
             password: req.body.password,
             email: req.body.email,

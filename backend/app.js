@@ -8,8 +8,19 @@ var indexRouter = require('./routes/login');
 var usersRouter = require('./routes/register');
 var getUserRouter = require('./routes/getUser');
 var updateUserRouter = require('./routes/updateUser');
-var url = 'mongodb://localhost/task';
-mongoose.connect(url);
+var url =
+    'mongodb+srv://rony:OACzF4EaWV5J4ctW@cluster0.34qrf.mongodb.net/task?retryWrites=true&w=majority';
+mongoose
+    .connect(url, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
+    .then(() => {
+        console.log('conn suc');
+    })
+    .catch((err) => {
+        console.log('err' + err);
+    });
 var app = express();
 
 app.use(bodyParser.json());
