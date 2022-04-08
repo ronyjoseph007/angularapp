@@ -1,0 +1,155 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+::ng-deep * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 860px;
+}
+header {
+  padding-left: 130px;
+  padding-top: 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 72px;
+  margin-left: 127px;
+  height: 450px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.main h1 {
+  font: normal normal medium 32px/67px Proxima Nova;
+  color: #192451;
+}
+
+.main p {
+  margin-top: -10px;
+}
+
+.main .sub {
+  color: #919194;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+  margin-top: 45px;
+  justify-content: space-between;
+}
+.class {
+  display: inline;
+}
+
+.email {
+  width: 500px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pass {
+  height: 50px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+label {
+  display: block;
+  color: #192451;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #aaa;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  outline: none;
+}
+::placeholder {
+  color: #aaa;
+}
+.check {
+  display: inline;
+}
+span {
+  margin-top: 50px;
+  width: max-content;
+  display: inline;
+  word-spacing: 3px;
+}
+a {
+  text-decoration: none;
+}
+
+button {
+  width: 250px;
+  height: 50px;
+  background-color: #192451;
+  box-shadow: 0px 1px 6px #39494c59;
+  border-radius: 4px;
+  color: #ffffff;
+  border: none;
+  font-size: 18px;
+  margin-top: 35px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+}
+button[disabled] {
+  border: 1px solid #999999;
+  opacity: 0.65;
+  color: #666666;
+  cursor: pointer;
+}
+
+button:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.land {
+  width: 956px;
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
+  align-items: center;
+}
+.bot {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.land::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  margin-top: 10px;
+  font-family: sans-serif;
+}

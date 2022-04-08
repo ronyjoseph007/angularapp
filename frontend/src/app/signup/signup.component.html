@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="//db.onlinewebfonts.com/c/6fc0ad4561b62243fd580b2e0e76d514?family=ProximaNova-Medium"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <img src="../../assets/images/title.png" />
+    </header>
+    <div class="container">
+      <div class="main">
+        <h1>Welcome to Globiliti!</h1>
+        <p class="sub">Create your school account</p>
+        <form (ngSubmit)="signUp()">
+          <div class="inputs">
+            <div class="email">
+              <label>Email</label>
+              <input type="email" placeholder="EMAIL" />
+            </div>
+            <div class="pass">
+              <label>Password</label>
+              <input type="password" placeholder="PASSWORD" />
+            </div>
+          </div>
+
+          <span
+            ><input class="check" type="checkbox" />I agree to the
+            <a href="#">Terms of Service </a> and
+            <a href="#">Privacy Policy</a></span
+          >
+
+          <button id="btn" type="submit">CREATE ACCOUNT</button>
+        </form>
+
+        <a routerLink="/login">ALREADY REGISTERED</a>
+      </div>
+
+      <div class="land">
+        <img
+          style="width: 455px; height: 430px"
+          src="../../assets/images/land.png"
+        />
+
+        <div class="bot">
+          <img
+            style="width: 80px; height: 80px"
+            src="../../assets/images/star.png"
+          />
+          <img
+            style="width: 240px; height: 240px"
+            src="../../assets/images/dots.png"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

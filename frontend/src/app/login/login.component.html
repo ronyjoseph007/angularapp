@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <img src="../../assets/images/title.png" />
+    </header>
+    <div class="container">
+      <div class="main">
+        <h1>Welcome to Globiliti!</h1>
+        <p class="sub">Create your school account</p>
+        <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+          <div class="inputs">
+            <div class="email">
+              <label>Email</label>
+              <input formControlName="email" type="email" placeholder="EMAIL" />
+            </div>
+            <div class="pass">
+              <label>Password</label>
+              <input
+                formControlName="password"
+                type="password"
+                placeholder="PASSWORD"
+              />
+            </div>
+          </div>
+
+          <button id="btn" type="submit">LOG IN</button>
+        </form>
+
+        <a routerLink="/signup">CREATE NEW ACCOUNT</a>
+      </div>
+      <div class="land">
+        <img
+          style="width: 455px; height: 430px"
+          src="../../assets/images/land.png"
+        />
+
+        <div class="bot">
+          <img
+            style="width: 80px; height: 80px"
+            src="../../assets/images/star.png"
+          />
+          <img
+            style="width: 240px; height: 240px"
+            src="../../assets/images/dots.png"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
